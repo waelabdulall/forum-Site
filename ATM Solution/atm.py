@@ -24,7 +24,7 @@ Hint:
 def atm_give(request):
 	
 	# define the allowed papers
-	allowed_papers	=	[100,50,10,5]
+	allowed_papers	=	[100,50,10,5,1]
 	switch 					=	0
 	repeat 					=	0
 	give						= []
@@ -35,7 +35,7 @@ def atm_give(request):
 		
 		#get the request mod divided by the biggest allowed number to get remain
 		remain	=request % allowed_papers[switch]
-		if remain > 5:
+		if request-remain >= 5:
 			result	=(request-remain)/allowed_papers[switch]
 			while repeat != result:
 				give.append(allowed_papers[switch])
