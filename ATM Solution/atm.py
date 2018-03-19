@@ -21,16 +21,40 @@ Hint:
 	while request > 0:
 '''
 
-# define the allowed papers
+def atm_give(request):
+	
+	# define the allowed papers
+	allowed_papers	=	[100,50,10,5]
+	switch 					=	0
+	repeat 					=	0
+	give						= []
+	
+	#in a loop
+	#get the request to match the conditions
+	while request	> 0:
+		
+		#get the request mod divided by the biggest allowed number to get remain
+		remain	=request % allowed_papers[switch]
+		if remain > 5:
+			result	=(request-remain)/allowed_papers[switch]
+			while repeat != result:
+				give.append(allowed_papers[switch])
+				repeat+=1
+			repeat = 0
+			request	= remain
+			switch	+=	1
+		else:
+			give.append(request)
+			break
+	
+	print_times= len(give) 
+	switch = 0
+	while switch < print_times:
+		print 'give',give[switch]
+		switch	+= 1
+		
 
 
-#get the request to match the conditions
+		#check if remain equal to the same number and if not check next 
 
-
-#in a loop
-
-
-#get the request mod divided by the biggest allowed number to get remain
-
-
-#check if remain equal to the same number and if not check next 
+atm_give(277)
