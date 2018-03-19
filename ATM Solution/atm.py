@@ -11,28 +11,32 @@ def atm_give(request):
 	repeat 					=	0
 	give						= []
 	
-	while request	> 0:
-		remain	=request % allowed_papers[switch]
-		if request-remain >= 5:
-			result	=(request-remain)/allowed_papers[switch]
-			
-			while repeat != result:
-				give.append(allowed_papers[switch])
-				repeat+=1
-			repeat = 0
-			request	= remain
-			switch	+=	1
-		else:
-			give.append(request)
-			break
-			
-	print_times= len(give) 
-	switch = 0
-	
-	while switch < print_times:
-		print 'give',give[switch]
-		switch	+= 1
+	if request <= money:
+		
+		while request	> 0:
+			remain	=request % allowed_papers[switch]
+			if request-remain >= 5:
+				result	=(request-remain)/allowed_papers[switch]
+				
+				while repeat != result:
+					give.append(allowed_papers[switch])
+					repeat+=1
+				repeat = 0
+				request	= remain
+				switch	+=	1
+			else:
+				give.append(request)
+				break
+				
+		print_times= len(give) 
+		switch = 0
+		
+		while switch < print_times:
+			print 'give',give[switch]
+			switch	+= 1
+	else:
+		print 'Credit is NOT Enough '
 		
 
 
-atm_give(277)
+atm_give(501)
