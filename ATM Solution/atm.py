@@ -36,7 +36,8 @@ def atm_give(request):
 			switch	+= 1
 	else:
 		print 'Credit is NOT Enough '
-		
+'''
+add this to master to see what will happen '''		
 
 
-atm_give(501)
+atm_give(227)
