@@ -1,17 +1,16 @@
 # allowed papers: 100, 50, 10, 5, and cents
-class ATM:
-	
+class ATM:	
 	def __init__(self,balance,bank_name):
+
 		self.withdrawals_list = []
 		self.balance = balance
 		self.bank_name = bank_name
-
 	
 	def withdraw(self, request):
-		
+
 	    print 'Welcome to '+ self.bank_name
 	    print "Current balance = "+ str(self.balance)
-	    print '=================================='
+	    print '='*34
 	
 	    if   request > self.balance:
 	        print "Can't give you all this money !!"
@@ -44,10 +43,12 @@ class ATM:
 	            elif request < 5:
 	                print "give " + str(request)
 	                request = 0
-	    print '=================================='
+	    print '='*34
 	    return self.balance
 
 	def show_withdrawals(self):
+		print "A Receipt from {0}".format(self.bank_name)+ " ATM"
+		print "="*34
 		for withdrawal in self.withdrawals_list:
 			print withdrawal
 
@@ -58,7 +59,8 @@ atm1 = ATM(balance1, "Smart Bank")
 atm2 = ATM(balance2, "Baraka Bank")
 
 atm1.withdraw(277)
-atm1.withdraw(800)
+atm1.withdraw(100)
+atm1.withdraw(20)
  	
 atm2.withdraw(100)
 atm2.withdraw(2000)
