@@ -22,12 +22,12 @@ class ATM:
 	        self.withdrawals_list.append(request)
 	        self.balance -= request
 
-	        ATM.process_request()
+	        self.process_request(request)
 
 	    print '='*34
 	    return self.balance
 
-	def process_request(@staticmethod):
+	def process_request(self,request):
 
 		while request > 0:
 
