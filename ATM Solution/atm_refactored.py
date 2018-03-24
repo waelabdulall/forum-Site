@@ -27,7 +27,8 @@ class ATM:
 	    print '='*34
 	    return self.balance
 
-	def process_request(self,request):
+	@staticmethod
+	def process_request(request):
 
 		while request > 0:
 
