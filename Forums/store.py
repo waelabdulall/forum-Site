@@ -2,29 +2,24 @@ class MemberStore:
 
 	members = []
 
-	def get_all(self):
-		# to get all /members
-		for member in range(len(self.members)):
-			# print member , len(self.members)
-			print self.members[member]
-
-			
 	def add(self,member):
 		# append name
 		self.members.append(member)
+	
+	def get_all(self):
+		# to get all /members
+		return MemberStore.members
 
-	def get_by_id(self,id):
-		# Search for member by id
-		pass
 
-	def update(self,member):
-		# update member data
-		pass
+class PostStore:
 
-	def delete(self,id):
-		# delete member by id
-		pass
+	posts = []
 
-	def entity_existis(self,member):
-		#checking if antity exists in a store
-		pass
+	def add(self,post):
+		# append post
+		self.posts.append(post)
+	
+	def get_all(self):
+		# to get all /posts
+		return PostStore.posts
+
