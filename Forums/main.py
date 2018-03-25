@@ -1,5 +1,5 @@
 from models import Member,Post
-from store import MemberStore
+from store import MemberStore , PostStore
 
 member1 = Member("Wael Abdulaal",38)
 member2 = Member("Khalid Mohammed", 30)
@@ -14,3 +14,10 @@ member_store.add(member1)
 member_store.add(member2)
 
 print member_store.get_all()
+
+post_store = PostStore()
+post_store.add(post1)
+post_store.add(post2)
+post_store.add(post3)
+
+print post_store.get_all()
