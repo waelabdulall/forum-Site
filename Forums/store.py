@@ -1,14 +1,14 @@
 class MemberStore:
 
-	member = []
+	members = []
 
 	def get_all(self):
 		# to get all /members
-		pass
+		return member in range(len(members))
 
 	def add(self,member):
 		# append name
-		pass
+		members.append(member)
 
 	def get_by_id(self,id):
 		# Search for member by id
