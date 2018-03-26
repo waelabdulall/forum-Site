@@ -13,11 +13,27 @@ member_store = MemberStore()
 member_store.add(member1)
 member_store.add(member2)
 
-print member_store.get_all()
+# print member_store.get_all()
 
 post_store = PostStore()
 post_store.add(post1)
 post_store.add(post2)
 post_store.add(post3)
 
-print post_store.get_all()
+# print post_store.get_all()
+
+# for each in member_store.members:
+# 	print each
+
+# print
+
+# for each in post_store.posts:
+# 	print each
+
+for each in member_store.get_all():
+	print each
+
+print
+
+for each in post_store.get_all():
+	print each
