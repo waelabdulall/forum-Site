@@ -2,14 +2,30 @@
 class MemberStore:
 
 	members = []
+	last_id = 1
 
 	def add(self,member):
 		# append name
-		self.members.append(member)
+		member.id = MemberStore.last_id
+		MemberStore.members.append(member)
+		MemberStore.last_id += 1
 	
 	def get_all(self):
 		# to get all /members
 		return MemberStore.members
+
+	def get_by_id(self,id):
+		all_members = self.get_all()
+
+		return result
+
+	def entity_exist(self,member):	
+		result = True
+		return result
+
+	def delete(self,id):
+
+
 
 
 class PostStore:
