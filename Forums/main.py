@@ -1,6 +1,6 @@
 #Workshop - Store Part-2
 from models import Member,Post
-from store import MemberStore , PostStore
+from stores import MemberStore , PostStore
 
 member1 = Member("Wael Abdulaal",38)
 member2 = Member("Khalid Mohammed", 30)
