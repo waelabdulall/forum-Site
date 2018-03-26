@@ -1,3 +1,4 @@
+#Workshop - Store Part-2
 class MemberStore:
 
 	members = []
