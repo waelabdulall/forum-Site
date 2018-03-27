@@ -31,10 +31,14 @@ post_store.add(post3)
 # for each in post_store.posts:
 # 	print each
 
-for each in member_store.get_all():
-	print each
+# for each in member_store.get_all():
+# 	print each
 
-print
+# print
 
-for each in post_store.get_all():
-	print each
+# for each in post_store.get_all():
+# 	print each
+
+print member_store.get_by_id(3)
+
+print member_store.entity_exist(member1)

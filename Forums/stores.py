@@ -16,8 +16,9 @@ class MemberStore:
 
 	def get_by_id(self,id):
 		all_members = self.get_all()
-
-		return result
+		for result in all_members:
+			if result.id ==id:
+				return result
 
 	def entity_exist(self,member):	
 		result = True
