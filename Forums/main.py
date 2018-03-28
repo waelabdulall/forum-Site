@@ -42,4 +42,8 @@ post_store.add(post3)
 
 #print member_store.get_by_id(3)
 
-print member_store.entity_exist(member1)
+# print member_store.entity_exist(member1)
+
+member_store.delete(1)
+for each in member_store.get_all():
+	print each

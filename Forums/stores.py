@@ -22,13 +22,18 @@ class MemberStore:
 				return result
 
 	def entity_exist(self,member):
+		
 		if member == self.get_by_id(member.id):
 			result = True
 			return result
 	
 
 	def delete(self,id):
-		pass
+
+		member = self.get_by_id(id)
+		MemberStore.members.remove(member)
+
+
 		
 class PostStore:
 	posts = []
