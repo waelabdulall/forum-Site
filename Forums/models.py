@@ -1,4 +1,4 @@
-#Workshop - Store Part-2
+#Workshop - Filtering
 class Member:
 	def __init__(self,member_name,member_age):
 		self.name = member_name
