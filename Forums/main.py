@@ -4,6 +4,7 @@ from stores import MemberStore , PostStore
 
 member1 = Member("Wael Abdulaal",38)
 member2 = Member("Khalid Mohammed", 30)
+member3 = Member("Nawwar Wael", 1)
 
 post1 = Post("Unix","Is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s ")
 post2 = Post("Linux","Is a family of free and open-source software operating systems built around the Linux kernel")
@@ -39,6 +40,6 @@ post_store.add(post3)
 # for each in post_store.get_all():
 # 	print each
 
-print member_store.get_by_id(3)
+#print member_store.get_by_id(3)
 
 print member_store.entity_exist(member1)
