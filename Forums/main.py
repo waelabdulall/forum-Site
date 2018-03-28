@@ -1,6 +1,8 @@
 #Workshop - Filtering
 from models import Member,Post
 from stores import MemberStore , PostStore
+import stores
+import models
 
 def create_members():
 
@@ -65,7 +67,7 @@ def catch_exception_when_deleting():
 members_instances = create_members()
 member1, member2, member3 = members_instances
 
-member_store = stores.MemberStore()
+member_store = MemberStore()
 
 store_should_add_models(members_instances, member_store)
 
