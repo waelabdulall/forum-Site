@@ -67,11 +67,6 @@ class MemberStore:
 				break
 				
 
-
-
-		
-
-
 		
 class PostStore:
 	posts = []
