@@ -83,6 +83,9 @@ catch_exception_when_deleting()
 
 print_all_members(member_store)
 
+# print "#"*30
+# print MemberStore.members
+
 #============================================
 post1 = Post("Unix","Is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s ")
 post2 = Post("Linux","Is a family of free and open-source software operating systems built around the Linux kernel")

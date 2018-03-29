@@ -44,14 +44,11 @@ class MemberStore:
 		return result
 
 	def get_by_name(self,name):
-		pass
-		# all_members= self.get_all()
+		all_members= self.get_all()
+		for member in all_members:
+			if member.name == name:
+				yield member
 
-		# for member in all_members:
-
-
-
-		# return result
 
 	def delete(self,id):
 		member = self.get_by_id(id)
