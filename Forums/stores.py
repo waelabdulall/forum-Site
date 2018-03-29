@@ -59,7 +59,17 @@ class MemberStore:
 
 
 	def update(self,member):
-		pass
+		
+		all_members = self.get_all()
+		for i, each in enumerate(all_members):
+			if each.id == member.id:
+				all_members[i] = member
+				break
+				
+
+
+
+		
 
 
 		
