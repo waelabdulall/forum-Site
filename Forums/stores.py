@@ -1,4 +1,4 @@
-#Workshop - Filtering
+#Workshop - Inheritance
 class MemberStore:
 
 	members = []
@@ -12,12 +12,6 @@ class MemberStore:
 	def get_all(self):
 		return MemberStore.members
 
-	# def get_by_id(self,id):
-
-	# 	all_members = self.get_all()
-	# 	for result in all_members:
-	# 		if result.id ==id:
-	# 			return result
 
 	def get_by_id(self, id):
 		all_members = self.get_all()
@@ -31,10 +25,6 @@ class MemberStore:
 
 		return result
 
-	# def entity_exist(self,member):
-	# 	if member == self.get_by_id(member.id):
-	# 		result = True
-	# 		return result
 
 	def entity_exists(self, member):
 
@@ -42,6 +32,7 @@ class MemberStore:
 		if self.get_by_id(member.id) is None:
 			result = False
 		return result
+
 
 	def get_by_name(self,name):
 		all_members= self.get_all()

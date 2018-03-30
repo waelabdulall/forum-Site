@@ -1,14 +1,14 @@
-#Workshop - Filtering
-from models import Member,Post
-from stores import MemberStore , PostStore
+#Workshop - Inheritance
+# from models import Member,Post
+# from stores import MemberStore , PostStore
 import stores
 import models
 
 def create_members():
 
-	member1 = Member("Wael Abdulaal",38)
-	member2 = Member("Khalid Mohammed", 30)
-	member3 = Member("Nawwar Wael", 1)
+	member1 = models.Member("Wael Abdulaal",38)
+	member2 = models.Member("Khalid Mohammed", 30)
+	member3 = models.Member("Nawwar Wael", 1)
 	print member1
 	print member2
 	print member3
@@ -67,7 +67,7 @@ def catch_exception_when_deleting():
 members_instances = create_members()
 member1, member2, member3 = members_instances
 
-member_store = MemberStore()
+member_store = stores.MemberStore()
 
 store_should_add_models(members_instances, member_store)
 
@@ -87,18 +87,18 @@ print_all_members(member_store)
 # print MemberStore.members
 
 #============================================
-post1 = Post("Unix","Is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s ")
-post2 = Post("Linux","Is a family of free and open-source software operating systems built around the Linux kernel")
-post3 = Post("macOS","Is a series of graphical operating systems developed and marketed by Apple Inc. since 2001")
+post1 = models.Post("Unix","Is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s ")
+post2 = models.Post("Linux","Is a family of free and open-source software operating systems built around the Linux kernel")
+post3 = models.Post("macOS","Is a series of graphical operating systems developed and marketed by Apple Inc. since 2001")
 
 
-member_store = MemberStore()
+member_store = stores.MemberStore()
 member_store.add(member1)
 member_store.add(member2)
 
 # print member_store.get_all()
 
-post_store = PostStore()
+post_store = stores.PostStore()
 post_store.add(post1)
 post_store.add(post2)
 post_store.add(post3)
