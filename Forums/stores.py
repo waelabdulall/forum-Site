@@ -1,5 +1,24 @@
 #Workshop - Inheritance
-class MemberStore:
+class BaseStore():
+
+	def __init__(self,data_provider,last_id):
+		self._data_provider = data_provider
+		self._last_id = last_id
+
+	def get_all(self):
+		return self._data_provider
+
+	def get_by_id(self, id):
+		for instance in self.get_all():
+			if instance.id == id:
+				return instance
+
+	def add(self,item_instance):
+		item_instance.id = self._last_id
+		self._data_provider.append(item_instance)
+		self._last_id +=1
+
+class MemberStore(BaseStore):
 
 	members = []
 	last_id = 1
@@ -56,7 +75,7 @@ class MemberStore:
 				
 
 		
-class PostStore:
+class PostStore(BaseStore):
 	posts = []
 
 	def add(self,post):
