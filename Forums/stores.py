@@ -30,6 +30,11 @@ class BaseStore():
 			if instance.id == updated_instance:
 				instance[index] = updated_instance
 
+	def delete(self,id):
+		instance = self.get_all
+		if instance is not None:
+			self._data_provider.remove(instance)
+
 
 class MemberStore(BaseStore):
 
