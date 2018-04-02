@@ -13,6 +13,12 @@ class BaseStore():
 			if instance.id == id:
 				return instance
 
+	def entity_exists(self,instance):
+		result =False
+		if instance is not None:
+			if instance is self.get_by_id(instance.id):
+				result = True
+
 	def add(self,item_instance):
 		item_instance.id = self._last_id
 		self._data_provider.append(item_instance)
