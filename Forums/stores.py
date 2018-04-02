@@ -20,9 +20,16 @@ class BaseStore():
 				result = True
 
 	def add(self,item_instance):
-		item_instance.id = self._last_id
+		instance.id = self._last_id
 		self._data_provider.append(item_instance)
 		self._last_id +=1
+
+	def update(self,updated_instance):
+		instances = self.get_all
+		for index, instance in enumerate(instances):
+			if instance.id == updated_instance:
+				instance[index] = updated_instance
+
 
 class MemberStore(BaseStore):
 
