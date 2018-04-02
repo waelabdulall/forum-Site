@@ -48,7 +48,13 @@ class MemberStore(BaseStore):
 	def get_by_name(self,name):
 		return member for member in self.get_all() if member.name == name :
 		
-		
+	def get_membr_with_post(self,post):
+		members = self.get_all()
+		for member, post in itertools.product(member,post):
+			if post.member_id == member.id:
+				member.post.append(post)
+		return members
+
 class PostStore(BaseStore):
 	posts = []
 
